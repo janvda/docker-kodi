@@ -66,6 +66,11 @@ RUN packages="                                               \
     apt-get -y --purge autoremove                         && \
     rm -rf /var/lib/apt/lists/*
 
+
+# ignore poweroff key on RF remote control
+COPY --chown=root logind.conf /etc/systemd/logind.conf
+
 # setup entry point
 COPY entrypoint.sh /usr/local/bin
+
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
