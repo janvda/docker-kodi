@@ -1,10 +1,54 @@
 # docker-kodi
 
+## installation
+
+1. Logon (ssh) to the machine where you want to run kodi
+2. pull my latest kodi version from docker hub
+
+```
+docker pull janvda/kodi:2.1.0
+```
+
+3. launch kodi using x11docker.  E.g.
+
+```bash
+x11docker --backend=docker   --xorg  -xc  -I       \
+            --pulseaudio                           \
+            --gpu                                  \
+            --wm=none                              \
+            --user=jan                             \
+            --home=/home/jan/kodi-jan/home2         \
+            -- -v kodi-jan-media2:/media:ro -v /run/user/1001/pulse/native:/x11docker/pulseaudio.socket -p 8090:8080 --      \
+            janvda/kodi:2.1.0 &
+```
+
+4.  Exit the shell (command `exit`) - this will assure that kodi keeps on running.
+
+## TED add-on installation
+
+1. install the zip version you find in the `/add-ons/` folder
+## VRT MAX add-on installation
+
+1. Install the zip version you find in the `/add-ons` folder 
+2. Configure it with your VRT max username and password
+3. Try playing a file this should install widevine
+4. It is normal that playing won't work - you have to stop and start kodi to get it working !!
+
+## Troubeshooting
+
+The log file can be found in folder `~/.kodi/temp/kodi.log`
+
+Enter following command in attached shell
+
+```
+more ~/.kodi/temp/kodi.log
+```
+
 ## Change History
 
-* 2.0.0 : Kodi version 20.0 on ubuntu release lunar, TED add-on in /add-on folder
+* 2.1.0 : added latest version of vrt nu add)in in /add-ons folder
+* 2.0.0 : Kodi version 20.0 on ubuntu release lunar, TED add-on in /add-ons folder
 * 1.1.0 : Kodi version 19.4 - having problems with TED, VRT max.
-
 # Readme from erichough/kodi
 
 Here below the original README.md from erichough/kodi
