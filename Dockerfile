@@ -18,21 +18,14 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-ARG UBUNTU_RELEASE=impish
+ARG UBUNTU_RELEASE=lunar
 FROM ubuntu:$UBUNTU_RELEASE
 
-ARG KODI_VERSION=19.4
+ARG KODI_VERSION=20.0
 
 # https://github.com/ehough/docker-nfs-server/pull/3#issuecomment-387880692
 ARG DEBIAN_FRONTEND=noninteractive
 
-# install the team-xbmc ppa
-RUN apt-get update                                                                  && \
-    apt-get install -y --no-install-recommends gpg-agent software-properties-common && \
-    add-apt-repository ppa:team-xbmc/ppa                                            && \
-    apt-get -y purge openssl gpg-agent software-properties-common                   && \
-    apt-get -y --purge autoremove                                                   && \
-    rm -rf /var/lib/apt/lists/*
 
 ARG KODI_EXTRA_PACKAGES=
 
@@ -47,25 +40,29 @@ ARG KODI_EXTRA_PACKAGES=
 #  - tzdata                       necessary for timezone selection
 #  - va-driver-all                the full suite of drivers for the Video Acceleration API (VA API)
 RUN packages="                                               \
-                                                             \
+    wget                                                     \
     ca-certificates                                          \
-    kodi=6:${KODI_VERSION}+*                                 \
+    kodi=2:${KODI_VERSION}+*                                 \
+    kodi-repository-kodi \
     kodi-eventclients-kodi-send                              \
+#    kodi-api-inputstream \
     kodi-inputstream-adaptive                                \
     kodi-inputstream-rtmp                                    \
-    kodi-peripheral-joystick                                 \
-    kodi-peripheral-xarcade                                  \
+# kodi-peripheral-joystick                                 \
+# kodi-peripheral-xarcade                                  \
     locales                                                  \
     pulseaudio                                               \
     tzdata                                                   \
     va-driver-all                                            \
     ${KODI_EXTRA_PACKAGES}"                               && \
-                                                             \
+                                                             \                                    
     apt-get update                                        && \
     apt-get install -y --no-install-recommends $packages  && \
     apt-get -y --purge autoremove                         && \
     rm -rf /var/lib/apt/lists/*
 
+# download working version of TED addon in /add-ons folder
+RUN mkdir /add-ons ; wget https://github.com/moreginger/xbmc-plugin.video.ted.talks/archive/refs/heads/feature/matrix.zip -O /add-ons/xbmc-plugin.video.ted.talks.zip
 
 # ignore poweroff key on RF remote control
 COPY --chown=root logind.conf /etc/systemd/logind.conf

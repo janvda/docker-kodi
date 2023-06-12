@@ -1,4 +1,13 @@
-# erichough/kodi
+# docker-kodi
+
+## Change History
+
+* 2.0.0 : Kodi version 20.0 on ubuntu release lunar, TED add-on in /add-on folder
+* 1.1.0 : Kodi version 19.4 - having problems with TED, VRT max.
+
+# Readme from erichough/kodi
+
+Here below the original README.md from erichough/kodi
 
 Dockerized [Kodi](https://kodi.tv/) with audio and video.
 
