@@ -1,6 +1,12 @@
 # docker-kodi
 
-## installation
+
+## Preinstallation
+
+Assure that a keyboard and mouse is connected to your Kodi device so that you have a way to configure Kodi.
+
+Note that adding a keyboard/mouse when Kodi container is already running won't wor.  In that case you have to stop and start Kodi.
+## Installation
 
 1. Logon (ssh) to the machine where you want to run kodi
 2. pull my latest kodi version from docker hub
@@ -24,6 +30,15 @@ x11docker --backend=docker   --xorg  -xc  -I       \
 
 4.  Exit the shell (command `exit`) - this will assure that kodi keeps on running.
 
+## Kodi-remote app
+
+Using the **Official Kodi Remote** app from App Store you can control Kodi.
+
+To use this you first need to enable "remote" control in Kodi 
+1. via Settings >Services > Control: 
+   1. web server > Allow remote control via HTTP
+   2. Application Control > Allow remote control from applications on other systems.
+
 ## TED add-on installation
 
 1. install the zip version you find in the `/add-ons/` folder
@@ -46,10 +61,11 @@ more ~/.kodi/temp/kodi.log
 
 ## Change History
 
-* 2.1.0 : added latest version of vrt nu add)in in /add-ons folder
-* 2.0.0 : Kodi version 20.0 on ubuntu release lunar, TED add-on in /add-ons folder
-* 1.1.0 : Kodi version 19.4 - having problems with TED, VRT max.
-# Readme from erichough/kodi
+* 2.1.0 (2023-06-12): added latest version of vrt nu add-on in `/add-ons` folder
+* 2.0.0 (2023-06-12): Kodi version 20.0 on ubuntu release lunar, TED add-on in `/add-ons` folder
+* 1.1.0 (2022-06-28): Kodi version 19.4 - having problems with TED, VRT max.
+* 1.0.0 (2022-06-25): First version
+# Original Readme from erichough/kodi
 
 Here below the original README.md from erichough/kodi
 
