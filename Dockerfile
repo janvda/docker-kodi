@@ -54,6 +54,8 @@ RUN packages="                                               \
     pulseaudio                                               \
     tzdata                                                   \
     va-driver-all                                            \
+    mesa-va-drivers                                           \
+    mesa-vdpau-drivers                                       \
     ${KODI_EXTRA_PACKAGES}"                               && \
                                                              \                                    
     apt-get update                                        && \

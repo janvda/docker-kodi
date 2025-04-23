@@ -1,6 +1,6 @@
 DOCKERHUB_ID:=janvda
 SERVICE_NAME:=kodi
-SERVICE_VERSION:=2.2.0
+SERVICE_VERSION:=2.2.1
 ARCHITECTURES=linux/amd64 #,linux/arm/v7,linux/arm64/v8
 
 # if you don't want the build to use cached layers replace next line by :

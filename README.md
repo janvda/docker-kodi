@@ -61,6 +61,7 @@ more ~/.kodi/temp/kodi.log
 
 ## Change History
 
+* 2.2.1 (2025-04-23): installed also mesa-va-drivers mesa-vdpau-drivers
 * 2.2.0 (2025-04-21): Kodi version 20.5 on ubuntu release noble-20250404
 * 2.1.0 (2023-06-12): added latest version of vrt nu add-on in `/add-ons` folder
 * 2.0.0 (2023-06-12): Kodi version 20.0 on ubuntu release lunar, TED add-on in `/add-ons` folder
