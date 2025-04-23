@@ -5,14 +5,14 @@
 
 Assure that a keyboard and mouse is connected to your Kodi device so that you have a way to configure Kodi.
 
-Note that adding a keyboard/mouse when Kodi container is already running won't wor.  In that case you have to stop and start Kodi.
+Note that adding a keyboard/mouse when Kodi container is already running won't work.  In that case you have to stop and start Kodi.
 ## Installation
 
 1. Logon (ssh) to the machine where you want to run kodi
 2. pull my latest kodi version from docker hub
 
 ```
-docker pull janvda/kodi:2.1.0
+docker pull janvda/kodi:2.2.0
 ```
 
 3. launch kodi using x11docker.  E.g.
@@ -25,7 +25,7 @@ x11docker --backend=docker   --xorg  -xc  -I       \
             --user=jan                             \
             --home=/home/jan/kodi-jan/home2         \
             -- -v kodi-jan-media2:/media:ro -v /run/user/1001/pulse/native:/x11docker/pulseaudio.socket -p 8090:8080 --      \
-            janvda/kodi:2.1.0 &
+            janvda/kodi:2.2.0 &
 ```
 
 4.  Exit the shell (command `exit`) - this will assure that kodi keeps on running.
@@ -61,6 +61,7 @@ more ~/.kodi/temp/kodi.log
 
 ## Change History
 
+* 2.2.0 (2025-04-21): Kodi version 20.5 on ubuntu release noble-20250404
 * 2.1.0 (2023-06-12): added latest version of vrt nu add-on in `/add-ons` folder
 * 2.0.0 (2023-06-12): Kodi version 20.0 on ubuntu release lunar, TED add-on in `/add-ons` folder
 * 1.1.0 (2022-06-28): Kodi version 19.4 - having problems with TED, VRT max.

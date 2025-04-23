@@ -18,10 +18,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-ARG UBUNTU_RELEASE=lunar
+ARG UBUNTU_RELEASE=noble-20250404
 FROM ubuntu:$UBUNTU_RELEASE
 
-ARG KODI_VERSION=20.0
+ARG KODI_VERSION=20.5
 
 # https://github.com/ehough/docker-nfs-server/pull/3#issuecomment-387880692
 ARG DEBIAN_FRONTEND=noninteractive
