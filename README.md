@@ -13,7 +13,7 @@ Note that adding a keyboard/mouse when Kodi container is already running won't w
 2. pull my latest kodi version from docker hub
 
 ```
-docker pull janvda/kodi:2.2.2
+docker pull janvda/kodi:2.2.3
 ```
 
 3. launch kodi using x11docker.  E.g.
@@ -26,7 +26,7 @@ x11docker --backend=docker   --xorg  -xc  -I       \
             --user=jan                             \
             --home=/home/jan/kodi-jan/home2         \
             -- -v kodi-jan-media2:/media:ro -v /run/user/1001/pulse/native:/x11docker/pulseaudio.socket -p 8090:8080 --      \
-            janvda/kodi:2.2.2 &
+            janvda/kodi:2.2.3 &
 ```
 
 4.  Exit the shell (command `exit`) - this will assure that kodi keeps on running.
@@ -63,6 +63,7 @@ more ~/.kodi/temp/kodi.log
 
 ## Change History
 
+* 2.2.3 (2025-04-26): updated vrt max version to 2.5.37+matrix.1 in `/add-ons` folder
 * 2.2.2 (2025-04-26): added video ted addon version 5.0.1 iso 5.0.0 to `/add-ons` folder
 * 2.2.1 (2025-04-23): installed also mesa-va-drivers mesa-vdpau-drivers
 * 2.2.0 (2025-04-21): Kodi version 20.5 on ubuntu release noble-20250404

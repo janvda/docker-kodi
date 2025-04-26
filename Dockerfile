@@ -66,9 +66,10 @@ RUN packages="                                               \
 # download working version of TED addon in /add-ons folder
 RUN mkdir /add-ons && \
    wget https://github.com/Kevwag-Kodi-Forks/plugin.video.ted.talks/releases/download/v5.0.1/plugin.video.ted.talks-5.0.1.zip -O /add-ons/plugin.video.ted.talks-5.0.1.zip && \
-    #wget https://github.com/moreginger/xbmc-plugin.video.ted.talks/archive/refs/heads/feature/matrix.zip -O /add-ons/xbmc-plugin.video.ted.talks.zip && \
-    wget https://github.com/add-ons/plugin.video.vrt.nu/archive/refs/heads/master.zip -O /add-ons/plugin.video.vrt.nu.zip
+   wget https://github.com/add-ons/plugin.video.vrt.nu/releases/download/v2.5.37/plugin.video.vrt.nu-2.5.37+matrix.1.zip -O /add-ons/plugin.video.vrt.nu-2.5.37+matrix.1.zip
 
+
+    
 # ignore poweroff key on RF remote control
 COPY --chown=root logind.conf /etc/systemd/logind.conf
 

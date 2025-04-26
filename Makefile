@@ -1,6 +1,6 @@
 DOCKERHUB_ID:=janvda
 SERVICE_NAME:=kodi
-SERVICE_VERSION:=2.2.2
+SERVICE_VERSION:=2.2.3
 ARCHITECTURES=linux/amd64 #,linux/arm/v7,linux/arm64/v8
 
 # BUILD_DOCKER_CONTEXT specifies the docker context of the build machine
