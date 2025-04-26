@@ -6,6 +6,7 @@
 Assure that a keyboard and mouse is connected to your Kodi device so that you have a way to configure Kodi.
 
 Note that adding a keyboard/mouse when Kodi container is already running won't work.  In that case you have to stop and start Kodi.
+
 ## Installation
 
 1. Logon (ssh) to the machine where you want to run kodi
@@ -42,6 +43,7 @@ To use this you first need to enable "remote" control in Kodi
 ## TED add-on installation
 
 1. install the zip version you find in the `/add-ons/` folder
+
 ## VRT MAX add-on installation
 
 1. Install the zip version you find in the `/add-ons` folder 
@@ -61,7 +63,7 @@ more ~/.kodi/temp/kodi.log
 
 ## Change History
 
-* 2.2.2 (2025-04-26): installed video ted addon version 5.0.1
+* 2.2.2 (2025-04-26): added video ted addon version 5.0.1 iso 5.0.0 to `/add-ons` folder
 * 2.2.1 (2025-04-23): installed also mesa-va-drivers mesa-vdpau-drivers
 * 2.2.0 (2025-04-21): Kodi version 20.5 on ubuntu release noble-20250404
 * 2.1.0 (2023-06-12): added latest version of vrt nu add-on in `/add-ons` folder
