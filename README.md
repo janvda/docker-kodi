@@ -53,6 +53,10 @@ To use this you first need to enable "remote" control in Kodi
 
 ## Troubeshooting
 
+### codec info during playback
+
+Within the official kodi remote app (running on my iphone) press long on `i` button.
+
 ### log files
 
 The log file can be found in folder `~/.kodi/temp/kodi.log`
