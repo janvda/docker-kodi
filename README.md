@@ -53,6 +53,8 @@ To use this you first need to enable "remote" control in Kodi
 
 ## Troubeshooting
 
+### log files
+
 The log file can be found in folder `~/.kodi/temp/kodi.log`
 
 Enter following command in attached shell
@@ -60,6 +62,21 @@ Enter following command in attached shell
 ```
 more ~/.kodi/temp/kodi.log
 ```
+
+### checking GPU  hardware accelleration
+
+Enter below commands on the host machine (e.g. via ssh)
+
+
+```bash
+# install gpu tools
+sudo apt install intel-gpu-tools
+
+
+# show gpu stats
+sudo intel_gpu_top
+```
+
 
 ## Change History
 
